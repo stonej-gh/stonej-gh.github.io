@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The lab notebooks | Jeffrey Stone</title>
+<meta name="description" content="Three machine-learning experiments, written up as they happened: a vision transformer that identifies plants, a tiny network that learns to fly a spaceship, and one that learns to see. Plain story, engineer's bridge, and working data science, with open code.">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="The lab notebooks">
+<meta property="og:description" content="A plant identifier and two tiny neural networks: one flies the ship, one watches the screen. Lab notebooks at three depths, with the open code behind them.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jeffrey Stone">
+<meta property="og:url" content="https://stonej-gh.github.io/">
+<meta property="og:image" content="https://stonej-gh.github.io/assets/og-research.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The lab notebooks: a plant identifier and two tiny networks, real experiments at three depths, with the films.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The lab notebooks">
+<meta name="twitter:description" content="A plant identifier and two tiny neural networks: one flies the ship, one watches the screen.">
+<meta name="twitter:image" content="https://stonej-gh.github.io/assets/og-research.png">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="icon" href="assets/apple-touch-icon.png" sizes="180x180">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="./"><span class="dot"></span> Jeffrey&nbsp;Stone</a>
+    <nav class="nav-links">
+      <a href="./" aria-current="page">Home</a>
+      <a href="orbits/">Orbits</a>
+      <a href="research/">Notebooks</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head" style="padding-bottom:0;">
+  <div class="wrap">
+    <p class="eyebrow">Open lab</p>
+    <h1>The lab notebooks</h1>
+    <p class="lede">Three machine-learning experiments, written up as they happened, failures included. The current one is a full-size vision transformer that identifies plants in the western United States, fine-tuned at home on one GPU and running on a phone. The other two are tiny networks: one teaches itself to fly a spaceship around a black hole with 6,220 numbers in its head, the other watches raw game frames and paints every ship, every laser, and the hole with 28,000. Those two are small enough to read end to end, and both ship with the code that produced them.</p>
+    <p class="tier-legend">Every experiment is written at <b style="color:var(--ink)">three depths</b>, and you choose per chapter: the plain story anyone can read; <span class="t-learn">&#9656; FOR THE LEARNERS</span>, which rebuilds the machinery from first principles with no machine-learning background assumed; and <span class="t-ds">&#9656; FOR THE DATA SCIENTISTS</span>, the working notebook in the field's own language.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="exp-grid" style="margin-top:0;">
+
+      <div class="exp-card">
+        <p class="ch-tag">Notebook 03 &middot; the plant identifier &middot; not written up yet</p>
+        <h3>A plant identifier for the western US</h3>
+        <p>The current work. A DINOv2 vision transformer, fine-tuned at home on one GPU and scoped to 4,191 species a phone meets in eleven western states, running on the iPhone's Neural Engine in under a second. The modern vision stack explained from attention up, a port proven against golden vectors, a measured unsure state, and a field loop where real testers tell the model where it is wrong.</p>
+        <p class="exp-meta"><b>87M params</b> &middot; ViT-B/14 &middot; attention, transformers, self-supervision &middot; field feedback</p>
+      </div>
+
+      <a class="exp-card" href="research/worm/">
+        <p class="ch-tag">Notebook 01 &middot; the pilot</p>
+        <h3>Half a worm, flying a spaceship</h3>
+        <p>A network the size of half a worm's brain starts with zero knowledge and teaches itself to fly, fight, cheat, get caught, and bend lasers around the black hole. With the three-minute film.</p>
+        <p class="exp-meta"><b>6,220 params</b> &middot; reinforcement learning &middot; self-play &middot; sim-to-real</p>
+      </a>
+
+      <a class="exp-card" href="research/spotter/">
+        <p class="ch-tag">Notebook 02 &middot; the eye</p>
+        <h3>The net that watches the screen</h3>
+        <p>The pilot got its senses served on a plate. Real systems get pixels. A 28,000-parameter network watches raw frames and paints what it sees, then gets squeezed into 8-bit integers you can't tell from the original.</p>
+        <p class="exp-meta"><b>28k params</b> &middot; convolutional segmentation &middot; int8 &middot; pixels in, game out</p>
+      </a>
+
+      <a class="exp-card" href="orbits/">
+        <p class="ch-tag">Background &middot; the physics</p>
+        <h3>Think in orbits</h3>
+        <p>Six pieces of orbital intuition the arena runs on, including why you hit the brakes to catch something ahead of you, and why aiming straight at an opponent misses. No maths required.</p>
+        <p class="exp-meta">gravity &middot; transfer orbits &middot; lead angles &middot; the slingshot</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The code</p>
+    <h2>ml-toys</h2>
+    <p class="lede">Everything behind the pilot and the eye is MIT licensed and runs on an ordinary laptop: the physics, the training loops, the graded experiments, and the frozen models you can replay without training anything. If you would rather read code than prose, start there. The repository stands on its own, and none of it depends on this site. The plant identifier's code follows once its regional model settles; the notebook says where.</p>
+    <div class="cta-row" style="margin-top:30px;">
+      <a class="btn btn-primary" href="https://github.com/stonej-gh/ml-toys">Get the code on GitHub &rarr;</a>
+      <a class="btn btn-ghost" href="research/">Read the notebooks</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="homage">
+      <p class="eyebrow">Where this came from</p>
+      <p>These experiments grew out of a game I built, an orbital duel fought around a black hole, and the networks here learned to fly it. The game, and the rest of what I make, lives at <a href="https://jeffrey-stone.com/">jeffrey-stone.com</a>. Nothing on this site needs it: the notebooks and the code stand on their own.</p>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 Jeffrey Stone</span>
+      <span class="free">Free forever &middot; no ads</span>
+      <span>The mailbox is open: <a href="mailto:letters@jeffrey-stone.com">letters@jeffrey-stone.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
